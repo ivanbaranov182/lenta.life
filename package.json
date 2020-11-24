@@ -1,11 +1,14 @@
 {
+  "homepage": "http://ivanbaranov182.github.io/lenta.life",
   "name": "webpacktemplate",
   "version": "1.0.0",
   "description": "My template + pug",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js"
+    "dev": "webpack-dev-server --open --config ./build-conf/webpack.dev.conf.js",
+    "build": "webpack --config ./build-conf/webpack.build.conf.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build-conf"
   },
   "browserslist": [
     "> 1%",
@@ -32,6 +35,7 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "file-loader": "^4.3.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.2",
     "node-sass": "^4.14.1",
