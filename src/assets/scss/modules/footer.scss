@@ -1,0 +1,145 @@
+.footer {
+	color: #fff;
+	background: $grey-color;
+	padding: 34px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: $ipadWidth) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__info {
+		@media screen and (max-width: $smTableWidth) {
+			margin-bottom: 20px;
+		}
+		&-copyright {
+			font-size: 14px;
+			margin-top: 4px;
+			margin-bottom: 8px;
+			@media screen and (max-width: $phoneWidth) {
+				margin-bottom: 15px;
+			}
+		}
+		&-bottom {
+			display: flex;
+			&__img {
+				margin-right: 16px;
+				@media screen and (max-width: $smTableWidth) {
+					margin-right: 0;
+				}
+			}
+			&__description {
+				font-weight: 300;
+				white-space: pre;
+				font-size: 14px;
+				line-height: 17px;
+				margin-top: -4px;
+				@media screen and (max-width: $phoneWidth) {
+					white-space: initial;
+					order: -1;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		@media screen and (max-width: $smDesktopWidth) {
+			flex-direction: column;
+			justify-content: space-between;
+			margin-left: 6%;
+		}
+		@media screen and (max-width: $ipadWidth) {
+			margin-left: 0;
+			order: -1;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		& ul {
+			padding: 0 53px 0 0;
+			border-right: 1px solid #fff;
+			margin: 0 40px 0 0;
+			line-height: 26px;
+			@media screen and (max-width: $smDesktopWidth) {
+				display: none;
+				height: 100%;
+				flex-direction: column;
+				justify-content: center;
+				margin-right: 0;
+			}
+			@media screen and (max-width: $ipadWidth) {
+				display: flex;
+				height: auto;
+				border-right: none;
+			}
+			&:last-child {
+				border-right: none;
+				padding-right: 0;
+				margin-right: 0;
+			}
+			&:first-child {
+				@media screen and (max-width: $smDesktopWidth) {
+					display: flex;
+				}
+			}
+			& li {
+				width: 100%;
+				& a {
+					font-size: 15px;
+					color: $white-color;
+					white-space: nowrap;
+					text-transform: uppercase;
+				}
+					display: none;
+				@media screen and (max-width: $smDesktopWidth) {
+				}
+				&:first-child,
+				&:nth-child(2){
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__meta {
+		display: flex;
+		@media screen and (max-width: $smTableWidth) {
+			width: 100%;
+			justify-content: space-between;
+		}
+		&-left {
+			margin-right: 21px;
+			@media screen and (max-width: $smTableWidth) {
+				margin-right: 0;
+			}
+		}
+		&-socials {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 6px;
+		}
+		&-button {
+			width: 100%;
+			font-size: 13px;
+			padding: 10px 20px;
+			border: 1px solid $white-color;
+			color: $white-color;
+			border-radius: $border-radius;
+			background: none;
+		}
+		&-counters {
+			& img {
+				margin-bottom: 10px;
+				display: block;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

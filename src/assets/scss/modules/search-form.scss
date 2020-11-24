@@ -1,0 +1,17 @@
+.search-form {
+  position: relative;
+  margin-bottom: 39px;
+  &__button {
+    background: none;
+    position: absolute;
+  }
+  &__input {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #4B4B4B;
+    background: none;
+    padding-left: 50px;
+    padding-bottom: 20px;
+  }
+}

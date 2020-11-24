@@ -1,0 +1,13 @@
+mixin news-text(news)
+  div(class='news-text ' + news.className)
+    .news-text__tags
+      +news-tag(news.tag.title, news.tag.className)
+    .news-text__list
+      each item in news.items
+        +news-text-item(item.title, item.date, item.views)
+
+mixin news-text-item(title, date, views)
+  .news-text-item
+    .news-text-item__title= title
+    if date && views
+      +news-info(date, views)

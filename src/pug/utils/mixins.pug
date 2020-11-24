@@ -1,0 +1,25 @@
+mixin commercial(type, text)
+  div(class='commercial ' + type)
+    h2.commercial__title= text
+
+mixin author-block(img, name, date, views, className)
+  div(class='author-block ' + className)
+    .author-block__img
+      img(src=img)
+    .author-block__right
+      .author-block__name= name
+      +news-info(date, views)
+
+mixin news-info(date, views)
+  .news-info
+    span.news-info__date= date
+    span.news-info__views
+      include ../../assets/img/icons/eye.svg
+      span= views
+
+mixin news-tag(title, className)
+  div(class='news-tag ' + className)= title
+
+mixin nav-item(title, link)
+  li
+    a(href=link)= title

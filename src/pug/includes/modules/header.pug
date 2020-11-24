@@ -1,0 +1,22 @@
+- const headerNav = [{"title": "Лучшее","link": "/"},{"title": "Еда","link": "/"},{"title": "Покупки","link": "/"},{"title": "Путешествия","link": "/"},{"title": "Все рубрики","link": "/"}];
+
+header.header
+  .container
+    .header__wrapper
+      include ../../includes/modules/hamburger
+      a(href='/', class='header__logo')
+        img(src="/assets/img/logo.svg")
+      nav.header__nav
+        ul
+          each item in headerNav
+            +nav-item(item.title, item.link)
+      .header__buttons
+        a.header__button.header__button_search(href="/search.html")
+          img(src="/assets/img/icons/search.svg")
+        .header__button.header__button_notification
+          img(src="/assets/img/icons/bell.svg")
+    .header__mobile
+      ul
+        each item in headerNav
+          +nav-item(item.title, item.link)
+      .header__mobile-copyright= '2020 © LENTA.LIFE'

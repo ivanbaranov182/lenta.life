@@ -1,0 +1,45 @@
+.author-info {
+  display: block;
+  padding: 19px;
+  margin-bottom: 18px;
+  &__top {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  &__image {
+    width: 79px;
+    height: 79px;
+    margin-right: 14px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__content {
+    //width: 100%;
+    &-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  }
+  &__meta {
+    display: flex;
+    &-values {
+      width: 80%;
+      font-size: 14px;
+      font-weight: 300;
+      color: #4B4B4B;
+    }
+    &-action {
+      width: 20%;
+      border: none;
+      background: none;
+    }
+  }
+  &__bottom {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,33 @@
+.news-tag {
+	display: inline-block;
+	padding: 4px 25px;
+	margin-right: 10px;
+	font-size: 14px;
+	font-weight: 300;
+	background: $pink-color;
+	border-radius: $border-radius;
+	color: $black-color;
+	@media screen and (max-width: $xsTableWidth) {
+		padding: 4px 19px;
+	}
+	&._pink {
+		background: $pink-color;
+	}
+	&._yellow {
+		background: $yellow-collor;
+	}
+	&._orange {
+		background: $orange-color;
+	}
+	&._blue {
+		background: $blue-color;
+	}
+	&._grey {
+		background: $light-grey-color;
+	}
+	&._no-bg {
+		background: none;
+		padding: 0;
+		font-size: 18px;
+	}
+}

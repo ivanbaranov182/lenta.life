@@ -1,0 +1,31 @@
+- const footerNav = [[{"title": "Все рубрики","link": "/"},{"title": "Лучшее","link": "/"},{"title": "Покупки","link": "/"}],[{"title": "Еда","link": "/"},{"title": "Путешествия","link": "/"},{"title": "Здоровье","link": "/"}],[{"title": "Лайфхаки","link": "/"},{"title": "Спорт","link": "/"},{"title": "Музыка","link": "/"}]];
+- const footerSocials = [{"name": "fb","icon": "/assets/img/fb.svg"},{"name": "vk","icon": "/assets/img/vk.svg"},{"name": "tg","icon": "/assets/img/tg.svg"},{"name": "tw","icon": "/assets/img/tw.svg"}];
+
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__info
+        .footer__info-copyright 2020 © LENTA.LIFE
+        .footer__info-bottom
+          .footer__info-bottom__img
+            img(src="/assets/img/18+.svg")
+          .footer__info-bottom__description.
+            Копирование материалов запрещено.
+            Издание может получать комиссию от покупки
+            товаров, представленных в публикациях.
+      nav.footer__nav
+        each list in footerNav
+          ul
+            each item in list
+              +nav-item(item.title, item.link)
+      .footer__meta
+        .footer__meta-left
+          .footer__meta-socials
+            each social in footerSocials
+              a.footer__meta-social
+                img(src=social.icon)
+          button.footer__meta-button Добавить на Яндекс
+        .footer__meta-counters
+          img(src="/assets/img/rambler-counter.png")
+          img(src="/assets/img/yandex-counter.png")
+

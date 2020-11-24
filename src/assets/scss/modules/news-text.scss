@@ -1,0 +1,25 @@
+.news-text {
+	padding: 17px 20px;
+	background: $white-color;
+	border-radius: $border-radius;
+	@media screen and (max-width: $smDesktopWidth) {
+		padding: 17px 15px;
+	}
+	@media screen and (max-width: $xsTableWidth) {
+		padding: 15px 20px;
+	}
+
+	&__tags {
+		margin-bottom: 32px;
+	}
+
+	&._only-title {
+		& .news-text__tags {
+			margin-bottom: 12px;
+		}
+
+		& .news-text-item__title {
+			margin-bottom: 0;
+		}
+	}
+}

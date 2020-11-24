@@ -1,0 +1,33 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+  @media screen and (max-width: $smDesktopWidth) {
+    display: inline-block;
+  }
+  &.active {
+    & ._bar1 {
+      transform: rotate(-45deg) translate(-10px, 8px);
+      @media screen and (max-width: $phoneWidth) {
+        transform: rotate(-45deg) translate(-6px, 5px);
+      }
+    }
+    & ._bar2 {
+      opacity: 0;
+    }
+    & ._bar3 {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+  &__bar {
+    width: 49px;
+    height: 4px;
+    background-color: $purple-color;
+    margin: 8px 0;
+    transition: 0.4s;
+    @media screen and (max-width: $phoneWidth) {
+      width: 26px;
+      height: 3px;
+      margin: 6px 0;
+    }
+  }
+}

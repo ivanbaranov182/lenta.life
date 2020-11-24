@@ -1,0 +1,428 @@
+.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $white-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 0 10px #e7e6e6;
+  &._w-padding {
+    padding: 10px;
+    & .news-item__img {
+      height: 260px;
+      //padding-top: 82%;
+      @media screen and (max-width: $smDesktopWidth) {
+        height: 290px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        height: 260px;
+      }
+    }
+    & .news-item__description {
+      padding-top: 20px;
+    }
+    & .news-item__title {
+      font-size: 16px;
+      @media screen and (max-width: $desktopWidth) {
+        font-size: 17px;
+        margin-bottom: 5px;
+        @media screen and (max-width: $ipadWidth) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: $tblWidth) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+        @media screen and (max-width: $xsTableWidth) {
+          font-size: 17px;
+          line-height: 22px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    & .news-item__text {
+      font-size: 14px;
+      margin-bottom: 22px;
+      @media screen and (max-width: $tblWidth) {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+  &._default {
+    height: 535px;
+    @media screen and (max-width: $tblWidth) {
+      height: 475px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      height: 425px;
+    }
+    @media screen and (max-width: $xsTableWidth) {
+      height: 535px;
+    }
+    & .news-item__description {
+      padding: 10px;
+      height: 212px;
+      @media screen and (max-width: $tblWidth) {
+        padding: 0;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        padding: 9px;
+      }
+    }
+    & .news-item__tags {
+      top: -23px;
+      @media screen and (max-width: $desktopWidth) {
+        top: -55px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        top: 4px;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        top: 15px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        top: initial;
+        margin-bottom: 18px;
+      }
+    }
+    & .news-item__img {
+      @media screen and (max-width: $desktopWidth) {
+        height: 233px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        height: 280px;
+      }
+    }
+  }
+  &._w-shadow {
+    box-shadow: 0 0 10px $light-grey-color;
+  }
+  &._wide._full-img {
+    & .news-item__title {
+      font-size: 31px;
+      line-height: 37px;
+      padding-top: 5px;
+      margin-bottom: 57px;
+      @media screen and (max-width: $desktopWidth) {
+        font-size: 29px;
+        padding-top: 0;
+        margin-bottom: 51px;
+      }
+      @media screen and (max-width: $ipadWidth) {
+        font-size: 25px;
+        margin-bottom: 30px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 21px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        font-size: 23px;
+        margin-bottom: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+  &._full-img {
+    height: 440px;
+    color: $white-color;
+    @media screen and (max-width: $ipadWidth) {
+      height: 369px;
+    }
+    @media screen and (max-width: $tblWidth) {
+      height: 276px;
+    }
+    & .news-item__title {
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 28px;
+      margin-bottom: 27px;
+      @media screen and (max-width: $tblWidth) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        font-size: 23px;
+        line-height: 29px;
+      }
+    }
+    & .news-item__img {
+      padding-top: 150%;
+      @media screen and (max-width: $tblWidth) {
+        padding-top: 200%;
+      }
+    }
+  }
+  &._full-img,
+  &._text-only {
+    height: 435px;
+    @media screen and (max-width: $desktopWidth) {
+      height: 392px;
+    }
+    @media screen and (max-width: $tblWidth) {
+      height: 384px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      height: 424px;
+    }
+    @media screen and (max-width: $xsTableWidth) {
+      height: 430px;
+    }
+    & .news-item__description {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 30px;
+      @media screen and (max-width: $desktopWidth) {
+        padding: 22px 35px 22px 28px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        padding: 20px 10px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        bottom: 0;
+        left: 0;
+        padding: 25px 30px;
+      }
+    }
+  }
+  &._wide {
+    & .news-item__description {
+      width: 49.5%;
+      @media screen and (max-width: $desktopWidth) {
+        width: 52.5%;
+        padding: 20px 30px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        padding: 20px 10px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        width: 100%;
+        padding: 20px 35px;
+      }
+    }
+    & .news-item__tags {
+      position: absolute;
+      top: 34px;
+      @media screen and (max-width: $desktopWidth) {
+        top: 22px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        position: relative;
+        top: initial;
+        margin-bottom: 46px;
+      }
+    }
+  }
+  &._text-only {
+    & .news-item__tags {
+      top: 35px;
+      @media screen and (max-width: $xsTableWidth) {
+        position: absolute;
+      }
+    }
+    & .news-item__title {
+      font-size: 30px;
+      line-height: 35px;
+      padding-top: 5px;
+      margin-bottom: 60px;
+    }
+  }
+  &._text-w-line {
+    & .news-item__title {
+      position: relative;
+      padding-left: 24px;
+      @media screen and (max-width: $desktopWidth) {
+        font-size: 30px;
+        max-height: 175px;
+        overflow: hidden;
+      }
+      @media screen and (max-width: $ipadWidth) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        font-size: 21px;
+        line-height: 24px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        font-size: 27px;
+        line-height: 35px;
+        max-height: 400px;
+        margin-bottom: 66px;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 100%;
+        background: $yellow-collor;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+      }
+    }
+  }
+  &._simple,
+  &._one-line {
+    & .news-item__img {
+      max-height: 260px;
+      @media screen and (max-width: $desktopWidth) {
+        max-height: 230px;
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        max-height: initial;
+      }
+    }
+  }
+  &__img {
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    & img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      min-width: 100%;
+      height: auto;
+    }
+  }
+  &__description {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+  }
+  &__tags {
+    position: absolute;
+    top: 20px;
+    @media screen and (max-width: $xsTableWidth) {
+      position: relative;
+      top: initial;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  &._one-line._wide {
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: $desktopWidth) {
+      height: 250px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      height: 312px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      flex-wrap: wrap;
+      height: 644px;
+    }
+    @media screen and (max-width: $xsTableWidth) {
+      height: 596px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      height: 535px;
+    }
+    & .news-item__img {
+      width: 42%;
+      margin-right: 5%;
+      @media screen and (max-width: $tblWidth) {
+        height: 290px;
+        width: 40%;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        width: 100%;
+        margin-right: 0;
+        height: 410px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        height: 330px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        height: 260px;
+      }
+      & img {
+        @media screen and (max-width: $tblWidth) {
+          width: initial;
+          height: 100%;
+        }
+        @media screen and (max-width: $smTableWidth) {
+          width: 100%;
+          height: initial;
+        }
+      }
+    }
+    & .news-item__description {
+      width: 53%;
+      padding-right: 15px;
+      @media screen and (max-width: $desktopWidth) {
+        padding: 0;
+        padding-right: 15px;
+        width: 53.5%;
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        width: 62.9%;
+        padding-right: 60px;
+        padding-bottom: 15px;
+      }
+      @media screen and (max-width: $tblWidth) {
+        width: 60%;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        width: 100%;
+        height: auto;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        padding: 0 10px;
+      }
+    }
+    & .news-item__title {
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+    & .news-item__text {
+      margin-bottom: 32px;
+      @media screen and (max-width: $desktopWidth) {
+        margin-bottom: 25px;
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width: $xsTableWidth) {
+        margin-bottom: 20px;
+      }
+    }
+    & .news-item__tags {
+      top: 15px;
+      @media screen and (max-width: $desktopWidth) {
+        top: 6px;
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        top: 20px;
+      }
+      @media screen and (max-width: $smTableWidth) {
+        position: relative;
+        top: initial;
+        margin: 18px 0;
+      }
+    }
+  }
+}

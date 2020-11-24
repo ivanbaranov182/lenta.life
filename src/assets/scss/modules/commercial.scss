@@ -1,0 +1,34 @@
+.commercial {
+	width: 100%;
+	height: 114px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	border: 1px solid #C4C4C4;
+	color: #C4C4C4;
+	margin-bottom: 22px;
+	&._top {
+		@media screen and (max-width: $desktopWidth) {
+			height: 104px;
+			margin-bottom: 2px;
+		}
+	}
+	&._center {
+		height: 300px;
+	}
+	&._aside {
+		height: 600px;
+		& .commercial__title {
+			font-size: 2rem;
+		}
+	}
+	&__title {
+		font-size: 50px;
+		font-weight: 100;
+		letter-spacing: 20px;
+		@media screen and (max-width: $smTableWidth) {
+			font-size: 1.5rem;
+		}
+	}
+}

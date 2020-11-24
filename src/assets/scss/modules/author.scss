@@ -1,0 +1,38 @@
+.author-block {
+	&._article-top {
+		& .author-block__img,
+		& .author-block__name {
+			display: none;
+		}
+	}
+	display: flex;
+	&__img {
+		height: 44px;
+		width: 44px;
+		margin-right: 14px;
+		border-radius: 100%;
+		overflow: hidden;
+		position: relative;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__right {
+
+	}
+	&__name {
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: 3px;
+		@media screen and (max-width: $tblWidth) {
+			font-size: 12px;
+		}
+		@media screen and (max-width: $xsTableWidth) {
+			font-size: 14px;
+		}
+	}
+}

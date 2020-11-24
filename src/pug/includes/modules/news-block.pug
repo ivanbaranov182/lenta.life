@@ -1,0 +1,17 @@
+mixin news-block(newsBlock)
+  div(class='news-block ' + newsBlock.className)
+     each item in newsBlock.items
+      +news-item(item.type, item.title, item.img, item.text, item.tag)
+
+mixin news-item(type, title, img, text, tag)
+  div(class='news-item ' + type)
+    .news-item__img
+      img(src=img)
+    .news-item__description
+      if tag
+        .news-item__tags
+          +news-tag(tag.title, tag.className)
+      .news-item__title= title
+      if text
+        .news-item__text= text
+      +author-block('/assets/img/author.png', 'Владимир Никитенко', '14.10.2020', '756')

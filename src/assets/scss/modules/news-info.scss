@@ -1,0 +1,23 @@
+.news-info {
+	font-size: 13px;
+	margin-top: 2px;
+	&__date {
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 2px;
+			height: 2px;
+			margin: 0 6px;
+			border-radius: 100%;
+			background: #4B4B4B;
+		}
+	}
+	&__views {
+		& svg {
+			position: relative;
+			top: 1px;
+			opacity: 0.5;
+		}
+	}
+}
