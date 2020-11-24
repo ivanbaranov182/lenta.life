@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --open --config ./build-conf/webpack.dev.conf.js",
     "build": "webpack --config ./build-conf/webpack.build.conf.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build-conf"
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     "> 1%",
