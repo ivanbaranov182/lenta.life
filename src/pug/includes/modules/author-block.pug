@@ -1,7 +1,9 @@
 .author-info
   .author-info__top
     .author-info__image
-      img(src='/assets/img/author.png')
+      picture
+        source(srcset='assets/img/author.png.webp', type='image/webp')
+        img(src='assets/img/author.png', alt= '')
     .author-info__content
       .author-info__content-title= 'Владимир Никитенко'
       .author-info__meta
@@ -9,5 +11,5 @@
           li= '1258 статей'
           li= '533 подписчика'
         button.author-info__meta-action
-          img(src='/assets/img/i/heart.svg')
+          include ../../../assets/img/i/heart.svg
   .author-info__bottom= 'Каждый день читай то, что больше никто не читает. Каждый день думай о том, о чём никто не думает. Каждый день делай то, что никто не делает.'

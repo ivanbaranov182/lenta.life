@@ -1,0 +1,119 @@
+extends ../layout/main
+
+block variables
+  - const title = 'Lenta.life | Обзор фильма';
+  - const description = 'Lenta.life description';
+  - const pageClass = 'article-page';
+  - const textNews = {"tag": {"title": "Лучшее за неделю","className": "_yellow"},"items": [{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"}]};
+  - const articleContents = {"className": "_only-title", "tag": {"title": "В этой статье","className": "_no-bg"},"items": [{"title": "О фильме"},{"title": "Сюжет"},{"title": "Актёрский состав"},{"title": "Номинация на Оскар"},{"title": "Наше мнение"},{"title": "Трейлер"}]};
+  - const newsBlock1 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"}]};
+  - const newsBlock2 = {"className": "_block2","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "assets/img/news/4.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "assets/img/news/5.png","tag": {"title": "Технологии","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "assets/img/news/6.png","tag": {"title": "Еда","className": "_orange"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","type": "_text-only _text-w-line","tag": {"title": "Лучшее","className": "_yellow"}}]};
+  - const newsBlock3 = {"className": "block3","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "assets/img/news/7.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "assets/img/news/8.png","tag": {"title": "Здоровье","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "assets/img/news/9.png","tag": {"title": "Здоровье","className": "_orange"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "assets/img/news/10.png","tag": {"title": "Здоровье","className": "_blue"}},]};
+  - const newsBlock4 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"}, {"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "assets/img/news/1.png","tag": {"title": "Лучшее", "className": "_yellow"}}]};
+  - const newsBlock11 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_2-col-img _wide _full-img _text-w-line","img": "assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}}]};
+
+block content
+  .container
+    section.section
+      +commercial('_top', 'Реклама')
+    .article
+      .article-intro
+        .article-intro__meta
+          +author-block('assets/img/author.png', 'Владимир Никитенко', '14.10.2020', '756', '_article-intro')
+          .article-intro__tags
+            +news-tag('Здоровье', '_pink')
+            +news-tag('Хобби', '_blue')
+        .article-intro__main
+          .article-intro__title= '«Зеленая книга»: самый симпатичный из фаворитов «Оскара»'
+          .article-intro__description= 'Премия «Оскар»-2019 за лучший фильм! Бывший вышибала Тони нанимается водителем к темнокожему музыканту с аристократическими манерами Дону Ширли. Они отправляются в тур по южным штатам, где в 1960-х еще царили расовые предрассудки.'
+      .article-author
+        include ../includes/modules/author-block
+      .article-image
+        picture
+          source(srcset='assets/img/article/article10.png.webp', type='image/webp')
+          img(src='assets/img/article/article10.png', alt='')
+        .img-desc= 'Фото: shutterstock.com'
+      .article-lenta
+        +news-text(textNews)
+
+      .article-left
+        +news-intro(articleContents)
+        +commercial('_aside', 'Реклама')
+
+      .article-content._no-margin
+        .article-content__img
+          picture
+            source(srcset='assets/img/article/article10.png.webp', type='image/webp')
+            img(src='assets/img/article/article10.png', alt='')
+          .img-desc= 'Фото: shutterstock.com'
+        .article-content__description= 'Премия «Оскар»-2019 за лучший фильм! Бывший вышибала Тони нанимается водителем к темнокожему музыканту с аристократическими манерами Дону Ширли. Они отправляются в тур по южным штатам, где в 1960-х еще царили расовые предрассудки.'
+        .article-content__info
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Год выпуска'
+              | 2018, США
+            .article-content__info-item
+              .article-content__info-name= 'Жанр'
+              | комедия, драма, биография
+            .article-content__info-item
+              .article-content__info-name= 'Режиссёр'
+              | Питер Фарелли
+            .article-content__info-item
+              .article-content__info-name= 'В ролях'
+              | Вигго Мортенсен, Махершала Али,
+              | Линда Карделлини
+          .article-content__info-right
+            .article-content__meta
+              .article-content__meta-item
+                .article-content__meta-icon
+                  include ../../assets/img/time.svg
+                .article-content__meta-value= '129 мин'
+              .article-content__meta-item
+                .article-content__meta-icon
+                  include ../../assets/img/star.svg
+                .article-content__meta-value
+                  | 8,3
+                  span= 'КиноПоиск'
+        h2.h2= 'О фильме'
+        p='Премия «Оскар»-2019 за лучший фильм! Бывший вышибала Тони нанимается водителем к темнокожему музыканту с аристократическими манерами Дону Ширли. Они отправляются в тур по южным штатам, где в 1960-х еще царили расовые предрассудки. Правдивая история дружбы талантливого пианиста из светских кругов со своим простодушным шофером и защитником легла в основу дорожной комедии «Зеленая книга» режиссера Питера Фаррелли («Тупой и еще тупее», «Я, снова я и Ирэн»). Фильм стал одним из главных участников оскаровской гонки 2019 года, собрав пять номинаций и получив главную премию за лучший фильм. Высокую оценку критиков и любовь зрителей завоевал обаятельный водитель-итальянец в исполнении датско-американской звезды Вигго Мортенсена.'
+        .quote
+          .quote-title
+            |То есть я недостаточно черный, и недостаточно белый.
+            br
+            |Скажи, Тони, кто я такой?!
+          .quote-author
+            b= 'Дон Ширли'
+        img(src='assets/img/article/article11.png')
+        .img-desc= 'Фото: kinopoisk.ru'
+        h2.h2= 'Сюжет'
+        p= 'Отец семейства Тони Валлелонга теряет работу в нью-йоркском ночном клубе, где он успешно справлялся с обязанностями вышибалы. Его опыт и «профессиональные» качества привлекают внимание нового работодателя – пианиста-виртуоза Дона Ширли, прославившегося в начале 1960-х как блестящий исполнитель классической музыки. Богатый музыкант ищет себе водителя не робкого десятка, который сопровождал бы его на гастролях по южным штатам. Дон – темнокожий, и ни талант, ни образование, ни светские манеры не защитят его от нападок расистов. Тони соглашается сопровождать Дона ради денег. Непростое двухмесячное путешествие заставит героев-антиподов изменить свои взгляды и станет началом редкой дружбы на всю жизнь.'
+        img(src='assets/img/article/article12.png')
+        .img-desc= 'Фото: kinopoisk.ru'
+        h2.h2= 'Наше мнение'
+        p= 'Отец семейства Тони Валлелонга теряет работу в нью-йоркском ночном клубе, где он успешно справлялся с обязанностями вышибалы. Его опыт и «профессиональные» качества привлекают внимание нового работодателя – пианиста-виртуоза Дона Ширли, прославившегося в начале 1960-х как блестящий исполнитель классической музыки. Богатый музыкант ищет себе водителя не робкого десятка, который сопровождал бы его на гастролях по южным штатам. Дон – темнокожий, и ни талант, ни образование, ни светские манеры не защитят его от нападок расистов. Тони соглашается сопровождать Дона ради денег. Непростое двухмесячное путешествие заставит героев-антиподов изменить свои взгляды и станет началом редкой дружбы на всю жизнь.'
+        img(src='assets/img/article/article13.png')
+        .article-content__bottom
+          .article-content__bottom-tags
+            +news-tag('#здоровье', '_grey')
+            +news-tag('#здоровье', '_grey')
+            +news-tag('#здоровье', '_grey')
+          .article-content__bottom-soc
+            img(src='assets/img/article-socials.png')
+
+      .article-right
+        +commercial('_aside', 'Реклама')
+        +commercial('_aside', 'Реклама')
+
+    section.section
+      +commercial('_center  ', 'Реклама')
+
+    section.news._block2
+      each item in newsBlock11.items
+        +news-item(item.type, item.title, item.img, item.text, item.tag)
+
+  .article-list
+    .article-list__content
+      include ../includes/modules/article-after
+    .article-list__aside
+      +commercial('_aside', 'Реклама')
+      +commercial('_aside', 'Реклама')

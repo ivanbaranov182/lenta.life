@@ -1,8 +1,8 @@
 mixin news-text(news)
-  div(class='news-text ' + news.className)
+  div.news-text(class= news.className)
     .news-text__tags
       +news-tag(news.tag.title, news.tag.className)
-    .news-text__list
+    div.news-text__list(class= news.listClassName)
       each item in news.items
         +news-text-item(item.title, item.date, item.views)
 
@@ -11,3 +11,23 @@ mixin news-text-item(title, date, views)
     .news-text-item__title= title
     if date && views
       +news-info(date, views)
+
+mixin news-outflow-item(item)
+  .news-outflow-item
+    .news-outflow-item__title= item.title
+    .news-outflow-item__value= item.value
+
+mixin news-intro(news)
+  div.news-intro(class= news.className)
+    .news-intro__tags
+      +news-tag(news.tag.title, news.tag.className)
+    div.news-intro__list(class= news.listClassName)
+      each item in news.items
+        if news.type === 'outflow'
+          +news-outflow-item(item)
+        else
+          +news-intro-item(item)
+
+mixin news-intro-item(item)
+  .news-intro-item
+    .news-intro-item__title= item.title

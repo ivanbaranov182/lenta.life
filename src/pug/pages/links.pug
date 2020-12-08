@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block variables
+  - const title = 'Lenta.life | Ссылки';
+  - const description = 'Lenta.life description';
+  - const pageClass = 'links-page';
+
+block content
+  .container
+    +commercial('_top', 'Реклама')
+    .article
+      .article-content
+        ul
+          li
+            a(href='/')= 'Главная'
+          li
+            a(href='/category.html')= 'Рубрика'
+          li
+            a(href='/search.html')= 'Поиск'
+          li
+            a(href='/article.html')= 'Статья'
+          li
+            a(href='/instruction.html')= 'Инструкция'
+          li
+            a(href='/film-review.html')= 'Обзор фильма'
+          li
+            a(href='/recipe.html')= 'Рецепт'
+          li
+            a(href='/person.html')= 'Персона'
+

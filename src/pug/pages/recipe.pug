@@ -1,0 +1,135 @@
+extends ../layout/main
+
+block variables
+  - const title = 'Lenta.life | Рецепт';
+  - const description = 'Lenta.life description';
+  - const pageClass = 'article-page';
+  - const textNews = {"tag": {"title": "Лучшее за неделю","className": "_yellow"},"items": [{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"}]};
+  - const articleContents = {"className": "_only-title _ingredients","listClassName": "_outflow","type": "outflow","tag": {"title": "Ингредиенты:","className": "_no-bg _bold"},"items": [{"title": "яблоко", "value": "5 шт"},{"title": "мука", "value": "1 стакан"},{"title": "разрыхлитель", "value": "1 чайная ложка"},{"title": "яйцо", "value": "4 шт"},{"title": "сахар", "value": "1 стакан"},{"title": "корица", "value": "1/2 чайной ложки"},{"title": "соль", "value": "на кончике ножа"}]};
+  - const newsBlock1 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "/assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"}]};
+  - const newsBlock2 = {"className": "_block2","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/4.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/5.png","tag": {"title": "Технологии","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/6.png","tag": {"title": "Еда","className": "_orange"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","type": "_text-only _text-w-line","tag": {"title": "Лучшее","className": "_yellow"}}]};
+  - const newsBlock3 = {"className": "block3","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/7.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/8.png","tag": {"title": "Здоровье","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/9.png","tag": {"title": "Здоровье","className": "_orange"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/10.png","tag": {"title": "Здоровье","className": "_blue"}},]};
+  - const newsBlock4 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"}, {"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "/assets/img/news/1.png","tag": {"title": "Лучшее", "className": "_yellow"}}]};
+  - const newsBlock11 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_2-col-img _wide _full-img _text-w-line","img": "assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}}]};
+
+block content
+  .container
+    section.section
+      +commercial('_top', 'Реклама')
+    .article
+      .article-intro
+        .article-intro__meta
+          +author-block('/assets/img/author.png', 'Владимир Никитенко', '14.10.2020', '756', '_article-intro')
+          .article-intro__tags
+            +news-tag('Рецепты', '_pink')
+            +news-tag('Лучшее', '_blue')
+        .article-intro__main
+          .article-intro__title= 'Шарлотка за полчаса - реально: нужно просто знать несколько секретов'
+          .article-intro__description
+            | Ту самую шарлотку от бабушки приготовить совсем просто, она готовится,
+            br
+            | пока я завариваю чай.
+      .article-author
+        include ../includes/modules/author-block
+      .article-image
+        picture
+          source(srcset='assets/img/article/article19.png.webp', type='image/webp')
+          img(src='assets/img/article/article19.png', alt= '')
+        .img-desc= 'Фото: shutterstock.com'
+      .article-lenta
+        +news-text(textNews)
+
+      .article-left
+        +news-intro(articleContents)
+        +commercial('_aside', 'Реклама')
+
+      .article-content._no-margin
+        .article-content__img
+          picture
+            source(srcset='assets/img/article/article19.png.webp', type='image/webp')
+            img(src='assets/img/article/article19.png', alt= '')
+          .img-desc= 'Фото: shutterstock.com'
+        .article-content__description= 'Ни одна маска не сможет защитить вас полностью. Но она снизит риск заражения при условии, что вы будете правильно её носить, а также регулярно мыть руки водой с мылом или обрабатывать спиртосодержащим антисептиком.'
+        .article-content__info._cols
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Кухня'
+              | русская
+            .article-content__info-item
+              .article-content__info-name= 'Вид блюда'
+              | выпечка
+            .article-content__info-item
+              .article-content__info-name= 'Назначение'
+              | завтрак
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Сложность'
+              | легко
+            .article-content__info-item
+              .article-content__info-name= 'Калорийность'
+              | 145 ккал
+          .article-content__info-right
+            .article-content__meta
+              .article-content__meta-item
+                .article-content__meta-icon
+                  include ../../assets/img/time.svg
+                .article-content__meta-value= '40 мин'
+              .article-content__meta-item
+                .article-content__meta-icon
+                  include ../../assets/img/food.svg
+                .article-content__meta-value= '6 порций'
+        h2.h2= 'Шаг 1'
+        p='Яблоки помойте и порежьте на средние кубики, немного сбрызните их лимонным соком, чтобы они не потемнели. Форму для выпекания смажьте сливочным маслом и припудрите мукой.'
+        .quote.left-border
+          .quote-title
+            | Для этой шарлотки нужны лишь сочные яблоки и мощный миксер, тогда она получится воздушной, а яблоки отдадут свою неповторимую кислинку.
+        picture
+          source(srcset='assets/img/article/article20.png.webp', type='image/webp')
+          img(src='assets/img/article/article20.png', alt= '')
+          .img-desc= 'Фото: eda.ru'
+        h2.h2= 'Шаг 2'
+        p= 'Яйца взбейте миксером, постепенно добавьте сахар, взбейте до нежно-бежевой пены, просейте муку с солью, корицей и разрыхлителем, чтобы тесто было воздушным.'
+        picture
+          source(srcset='assets/img/article/article21.png.webp', type='image/webp')
+          img(src='assets/img/article/article21.png', alt= '')
+        .img-desc= 'Фото: eda.ru'
+        h2.h2= 'Шаг 3'
+        p= 'Тесто аккуратно вымесите ложкой, проводя её снизу вверх, так тесто насытится пузырьками воздуха и не опадёт при выпекании. Когда тесто станет однородным, добавьте яблоки и немного перемешайте, также снизу вверх.'
+        picture
+          source(srcset='assets/img/article/article22.png.webp', type='image/webp')
+          img(src='assets/img/article/article22.png', alt= '')
+        .img-desc= 'Фото: eda.ru'
+        h2.h2= 'Шаг 4'
+        p= 'Тесто аккуратно вымесите ложкой, проводя её снизу вверх, так тесто насытится пузырьками воздуха и не опадёт при выпекании. Когда тесто станет однородным, добавьте яблоки и немного перемешайте, также снизу вверх.'
+        picture
+          source(srcset='assets/img/article/article23.png.webp', type='image/webp')
+          img(src='assets/img/article/article23.png', alt= '')
+        .img-desc= 'Видео: youtube.com'
+
+        .article-content__bottom
+          .article-content__bottom-tags
+            +news-tag('#лучшее', '_grey')
+            +news-tag('#рецепты', '_grey')
+            +news-tag('#пирог', '_grey')
+          .article-content__bottom-soc
+            picture
+              source(srcset='assets/img/article-socials.png.webp', type='image/webp')
+              img(src='assets/img/article-socials.png', alt= '')
+
+      .article-right
+        +commercial('_aside', 'Реклама')
+        +commercial('_aside', 'Реклама')
+
+    section.section
+      +commercial('_center  ', 'Реклама')
+
+    section.news._block2
+      each item in newsBlock11.items
+        +news-item(item.type, item.title, item.img, item.text, item.tag)
+
+    .article-list
+      .article-list__content
+        include ../includes/modules/article-after
+      .article-list__aside
+        +commercial('_aside', 'Реклама')
+        +commercial('_aside', 'Реклама')

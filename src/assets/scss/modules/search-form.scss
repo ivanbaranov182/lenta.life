@@ -4,11 +4,13 @@
   &__button {
     background: none;
     position: absolute;
+    border: none;
   }
   &__input {
     width: 100%;
     font-size: 20px;
     font-weight: bold;
+    border: none;
     border-bottom: 1px solid #4B4B4B;
     background: none;
     padding-left: 50px;

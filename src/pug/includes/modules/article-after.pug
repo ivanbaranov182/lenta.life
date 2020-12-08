@@ -1,0 +1,15 @@
+.article._preview
+  .article-intro
+    .article-intro__meta
+      +author-block('assets/img/author.png', 'Владимир Никитенко', '14.10.2020', '756', '_article-intro')
+      .article-intro__tags
+        +news-tag('Здоровье', '_pink')
+        +news-tag('Хобби', '_blue')
+    .article-intro__title= '22 гипоаллергенные породы собак для тех, кто не может жить без питомца'
+    .article-intro__description= 'Если вы чихаете на немецкую овчарку, это ещё не значит, что вы не сможете завести домашнее животное. Скажем сразу, полностью гипоаллергенных пород нет. Но есть собаки, которые могут вызвать меньше симптомов, чем другие.'
+  .article-image
+    picture
+      source(srcset='assets/img/article/article1.png.webp', type='image/webp')
+      img(src='assets/img/article/article1.png', alt='')
+  .article-after
+    a.article-after__link(href='/')= 'читать далее'

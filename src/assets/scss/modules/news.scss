@@ -2,6 +2,7 @@
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 334px 334px 334px 334px;
+  margin-bottom: 20px;
   @media screen and (max-width: $desktopWidth) {
     grid-template-columns: 300px 300px 300px 300px;
   }

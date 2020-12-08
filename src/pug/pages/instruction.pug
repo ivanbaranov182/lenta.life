@@ -1,0 +1,147 @@
+extends ../layout/main
+
+block variables
+  - const title = 'Lenta.life | Инструкция';
+  - const description = 'Lenta.life description';
+  - const pageClass = 'article-page';
+  - const textNews = {"tag": {"title": "Лучшее за неделю","className": "_yellow"},"items": [{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"},{"title": "А что, так можно было? Простые рецепты фаршированной картошки, которые сэкономят время у плиты","date": "14.10.2020","views": "756"},{"title": "Тёплый AliExpress: 15 товаров, без которых не обойтись осенью и зимой","date": "14.10.2020","views": "756"}]};
+  - const articleContents = {"className": "_only-title", "tag": {"title": "В этой статье","className": "_no-bg"},"items": [{"title": "Что нужно учесть"},{"title": "Шаг 1. Подготовьте материалы"},{"title": "Шаг 2. Вырежьте детали"},{"title": "Шаг 3. Сделайте сгибы"},{"title": "Шаг 4. Прикрепите резинки"},{"title": "Смотреть видео"}]};
+  - const newsBlock1 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "/assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"}]};
+  - const newsBlock2 = {"className": "_block2","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/4.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/5.png","tag": {"title": "Технологии","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_w-padding","img": "/assets/img/news/6.png","tag": {"title": "Еда","className": "_orange"}},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"},{"title": "10 приложений с которыми вы забудете о пластиковых картах скидок","type": "_text-only _text-w-line","tag": {"title": "Лучшее","className": "_yellow"}}]};
+  - const newsBlock3 = {"className": "block3","items": [{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/7.png","tag": {"title": "Здоровье","className": "_pink"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/8.png","tag": {"title": "Здоровье","className": "_blue"}},{"title": "Жизнь по протоколу в Царской России: что должен был сделать кавалер после танца с дамой","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/9.png","tag": {"title": "Здоровье","className": "_orange"}},{"title": "Как сделать антисептик для рук, который точно работает","text": "Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу","type": "_wide _w-padding _one-line","img": "/assets/img/news/10.png","tag": {"title": "Здоровье","className": "_blue"}},]};
+  - const newsBlock4 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "/assets/img/news/2.png"}, {"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "/assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_wide _full-img _text-w-line","img": "/assets/img/news/1.png","tag": {"title": "Лучшее", "className": "_yellow"}}]};
+  - const newsBlock11 = {"className": "_block1","items": [{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_full-img","img": "assets/img/news/2.png"},{"title": "Невероятный рецепт вкусного куриного пирога с сыром","type": "_full-img","img": "assets/img/news/3.png"},{"title": "10 приложений, с которыми вы забудете о пластиковых картах скидок","type": "_2-col-img _wide _full-img _text-w-line","img": "assets/img/news/1.png","tag": {"title": "Лучшее","className": "_yellow"}}]};
+
+block content
+  .container
+    section.section
+      +commercial('_top', 'Реклама')
+    .article
+      .article-intro
+        .article-intro__meta
+          +author-block('/assets/img/author.png', 'Владимир Никитенко', '14.10.2020', '756', '_article-intro')
+          .article-intro__tags
+            +news-tag('Здоровье', '_pink')
+            +news-tag('Хобби', '_blue')
+        .article-intro__main
+          .article-intro__title= 'Как сделать медицинскую маску своими руками: пошаговая инструкция'
+          .article-intro__description= 'Ни одна маска не сможет защитить вас полностью. Но она снизит риск заражения при условии, что вы будете правильно её носить, а также регулярно мыть руки водой с мылом или обрабатывать спиртосодержащим антисептиком.'
+      .article-author
+        include ../includes/modules/author-block
+      .article-image
+        picture
+          source(srcset='assets/img/article/article4.png.webp', type='image/webp')
+          img(src='assets/img/article/article4.png', alt= '')
+        .img-desc= 'Фото: shutterstock.com'
+      .article-lenta
+        +news-text(textNews)
+
+      .article-left
+        +news-text(articleContents)
+        +commercial('_aside', 'Реклама')
+
+      .article-content._no-margin
+        .article-content__img
+          picture
+            source(srcset='assets/img/article/article4.png.webp', type='image/webp')
+            img(src='assets/img/article/article4.png', alt= '')
+          .img-desc= 'Фото: shutterstock.com'
+        .article-content__description= 'Ни одна маска не сможет защитить вас полностью. Но она снизит риск заражения при условии, что вы будете правильно её носить, а также регулярно мыть руки водой с мылом или обрабатывать спиртосодержащим антисептиком.'
+        .article-content__info
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Назначение'
+              | медицинское
+            .article-content__info-item
+              .article-content__info-name= 'Сложность'
+              | легко
+            .article-content__info-item
+              .article-content__info-name= 'Стоимость материалов'
+              | от 9 ₽/шт
+          .article-content__info-right
+            .article-content__meta
+              .article-content__meta-item
+                .article-content__meta-icon
+                  include ../../assets/img/time.svg
+                .article-content__meta-value= '5 мин'
+        .article-content__info
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Материалы'
+              | плотное бумажное полотенце
+              | эластичная лента для шитья
+              | клей‑карандаш
+              | фломастер
+          .article-content__info-list
+            .article-content__info-item
+              .article-content__info-name= 'Инструменты'
+              | ножницы
+              | степлер
+        h2.h2= 'Что нужно учесть'
+        p='Ни одна маска не сможет защитить вас полностью. Но она снизит риск заражения при условии, что вы будете правильно её носить, а также регулярно мыть руки водой с мылом или обрабатывать спиртосодержащим антисептиком.'
+        p= 'Материал, из которого вы планируете сделать маску, должен быть:'
+        ul
+          li= 'Дышащим. Это нужно, чтобы вы могли свободно дышать, а лицо под маской не потело.'
+          li= 'Не грубым. Во-первых, грубая ткань будет раздражать кожу. А во-вторых, не сможет повторить очертания лица, то есть маска будет прилегать к коже не плотно.'
+        p= 'Как только маска станет сырой (как правило, это происходит в течение 2–3 часов), замените её на новую. В идеале нужно менять маску сразу после того, как вы внутри неё чихнули или закашлялись. Для этого стоит изготовить несколько масок и носить их пачкой с собой.'
+        .quote
+          .quote-title
+            | Ни в коем случае не носите одну и ту же маску
+            br
+            | дольше суток
+        h2.h2= 'Шаг 1'
+        picture
+          source(srcset='assets/img/article/article5.png.webp', type='image/webp')
+          img(src='assets/img/article/article5.png', alt= '')
+        .img-desc= '@mizutama.soap / YouTube 00:00:10'
+        p= 'От полотенца отрежьте прямоугольник размером 20 х 16 см. Согните его поперёк пополам. Положите сгибом вверх и смажьте нижний узкий край клеем.'
+        h2.h2= 'Шаг 2'
+        picture
+          source(srcset='assets/img/article/article6.png.webp', type='image/webp')
+          img(src='assets/img/article/article6.png', alt= '')
+        .img-desc= '@mizutama.soap / YouTube 00:00:10'
+        p= 'агните этот край наверх на 1 см и приклейте. Точно так же загните и приклейте другой узкий край детали.'
+        +news-item('_wide _w-padding _one-line _w-shadow _', 'Как сделать антисептик для рук, который точно работает', '/assets/img/news/15.png', 'Русскоязычный Netflix расстроил зрителей нелепым переводом и удаленными шоу', {"title": "Здоровье","className": "_pink"})
+        h2.h2= 'Шаг 3'
+        picture
+          source(srcset='assets/img/article/article7.png.webp', type='image/webp')
+          img(src='assets/img/article/article7.png', alt= '')
+        .img-desc= '@mizutama.soap / YouTube 00:00:10'
+        p= 'С двух длинных сторон фломастером сделайте отметки на сгибе, а также на расстоянии 1,5 см и 5 см сверху и снизу от сгиба. Нанесите клей на обе отметки, расположенные на расстоянии 1,5 см над сгибом. Загните верхнюю часть бумаги, склеивая стороны.'
+        h2.h2= 'Шаг 4'
+        picture
+          source(srcset='assets/img/article/article8.png.webp', type='image/webp')
+          img(src='assets/img/article/article8.png', alt= '')
+        .img-desc= '@mizutama.soap / YouTube 00:00:10'
+        p= 'От ленты отрежьте две полоски длиной 18 см. Если используете шнур, вам понадобятся детали длиной 23 см. Переверните бумажную «гармошку» на другую сторону и с помощью степлера прикрепите к узкому краю одну полоску. Убедитесь, что она не выпадает. Повторите то же самое с другой узкой стороны. Маска готова.'
+        picture
+          source(srcset='assets/img/article/article9.png.webp', type='image/webp')
+          img(src='assets/img/article/article9.png', alt= '')
+
+        .article-content__bottom
+          .article-content__bottom-tags
+            +news-tag('#здоровье', '_grey')
+            +news-tag('#лайфхак', '_grey')
+            +news-tag('#маска', '_grey')
+          .article-content__bottom-soc
+            picture
+              source(srcset='assets/img/article-socials.png.webp', type='image/webp')
+              img(src='assets/img/article-socials.png', alt= '')
+
+      .article-right
+        +commercial('_aside', 'Реклама')
+        +commercial('_aside', 'Реклама')
+
+    section.section
+      +commercial('_center  ', 'Реклама')
+
+    section.news._block2
+      each item in newsBlock11.items
+        +news-item(item.type, item.title, item.img, item.text, item.tag)
+
+    .article-list
+      .article-list__content
+        include ../includes/modules/article-after
+      .article-list__aside
+        +commercial('_aside', 'Реклама')
+        +commercial('_aside', 'Реклама')

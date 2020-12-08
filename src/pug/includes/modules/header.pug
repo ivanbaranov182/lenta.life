@@ -5,16 +5,16 @@ header.header
     .header__wrapper
       include ../../includes/modules/hamburger
       a(href='/', class='header__logo')
-        img(src="/assets/img/logo.svg")
+        img(src="assets/img/logo.svg")
       nav.header__nav
         ul
           each item in headerNav
             +nav-item(item.title, item.link)
       .header__buttons
         a.header__button.header__button_search(href="/search.html")
-          img(src="/assets/img/i/search.svg")
+          img(src="assets/img/i/search.svg")
         .header__button.header__button_notification
-          img(src="/assets/img/i/bell.svg")
+          img(src="assets/img/i/bell.svg")
     .header__mobile
       ul
         each item in headerNav

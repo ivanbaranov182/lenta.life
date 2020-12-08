@@ -1,17 +1,24 @@
 .category {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
   &__title {
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px;
   }
   &__text {
     font-size: 18px;
     font-weight: 500;
   }
+  &__description {
+    width: 70%;
+  }
   &__tag {
     &-item {
       font-size: 30px;
       padding: 14px 20px;
+      margin-top: 20px;
       background: $pink-color;
       border-radius: $border-radius;
       text-transform: uppercase;

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build-conf/webpack.dev.conf.js",
     "build": "webpack --config ./build-conf/webpack.build.conf.js",
-    "predeploy": "npm run build",
+    "predeploy": "",
     "deploy": "gh-pages -d build"
   },
   "browserslist": [
@@ -21,8 +21,7 @@
     "bable",
     "bable7",
     "scss",
-    "pug",
-    "vue"
+    "pug"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -37,6 +36,7 @@
     "file-loader": "^4.3.0",
     "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "imagemin-webp-webpack-plugin": "^3.3.3",
     "mini-css-extract-plugin": "^0.8.2",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
@@ -46,15 +46,10 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.3.0",
     "url-loader": "^4.1.1",
-    "vue-loader": "^15.9.5",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {
-    "vue": "^2.6.12"
-  }
+  "dependencies": {}
 }

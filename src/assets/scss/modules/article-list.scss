@@ -1,0 +1,20 @@
+.article-list {
+  display: flex;
+
+  &__content {
+    flex: 1;
+  }
+
+  &__aside {
+    width: 300px;
+    margin-left: 30px;
+
+
+    & .commercial {
+      & .commercial__title {
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+      }
+    }
+  }
+}

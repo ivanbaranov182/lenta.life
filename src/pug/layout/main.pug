@@ -14,10 +14,9 @@ html(lang='ru')
 
   body(class=pageClass)
     .wrapper
-      #app
-        include ../includes/modules/header
-        .content-wrapper
-          block content
-        include ../includes/modules/footer
+      include ../includes/modules/header
+      .content-wrapper
+        block content
+      include ../includes/modules/footer
 
     block script

@@ -1,0 +1,32 @@
+.news-intro {
+  padding: 27px 20px 20px 20px;
+  background: $white-color;
+  border-radius: $border-radius;
+  margin-bottom: 16px;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 17px 15px;
+  }
+  @media screen and (max-width: $xsTableWidth) {
+    padding: 15px 20px;
+  }
+  &__tags {
+    margin-bottom: 32px;
+  }
+
+  &._only-title {
+    & .news-intro__tags {
+      margin-bottom: 10px;
+    }
+
+    & .news-intro-item__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &._ingredients {
+    padding: 18px 40px 18px 21px;
+    & .news-intro__tags {
+      margin-bottom: 3px;
+    }
+  }
+}
