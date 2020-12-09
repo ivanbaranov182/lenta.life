@@ -73,14 +73,14 @@ section, .section {
   min-width: $smPhoneWidth;
   @media screen and (max-width: $desktopWidth) {
     padding: 0 20px;
-    max-width: $smDesktopWidth;
+    max-width: 100%;
   }
   @media screen and (max-width: $smDesktopWidth) {
     padding: 0 40px;
-    max-width: $ipadWidth;
+    //max-width: $ipadWidth;
   }
   @media screen and (max-width: $ipadWidth) {
-    max-width: $tblWidth;
+    //max-width: $tblWidth;
   }
   @media screen and (max-width: $tblWidth) {
     //max-width: $smTableWidth;
